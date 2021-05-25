@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="mysite">
+    <path id = "common_library">
+        <pathelement location="src/ru/mysite/web/servlets/servlet-api.jar"/>
+    </path>
+    <target name="compile">
+        <javac srcdir="src" destdir="web/WEB-INF/classes" failonerror="true" fork="true">
+            <classpath refid="common_library"/>
+        </javac>
+        <copy todir="C:\Users\appat\OneDrive\Рабочий стол\apache-tomcat-7.0.109\webapps\ROOT">
+            <fileset dir="web"/>
+        </copy>
+    </target>
+</project>
